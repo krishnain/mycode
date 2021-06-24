@@ -1,0 +1,22 @@
+gatsbyjs.org
+getting started
+
+Install it
+
+node --version
+npm --version
+
+npm install
+
+gatsby new static-website
+cd static-website
+
+gatsby devlop
+
+public_ip:8000
+
+
+
+
+
+

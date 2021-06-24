@@ -1,0 +1,39 @@
+
+https://releases.hashicorp.com/terraform-provider-aws/3.36.0/terraform-provider-aws_3.36.0_windows_amd64.zip
+
+Create an Iam user on aws with admin previalges
+Download the user info csv file
+
+To install terrafrom
+terraform.io.downloads
+
+
+Providers is code library that can communicate with a specific
+technology like Jenkins,AWS,Azure etc
+Provider trasnlate the terrafoem code into something that a
+technlogy can understand
+
+Providers info is available on
+https://registry.terraform.io/browse/providers
+
+Create main.tf file in pycharm
+provider "aws" {
+  region = "us-west-1"
+  access_key = "AKIAS43BASASCC4DICTS"
+  secret_key = "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"
+}
+
+In cmd prompt go to the folder where we have main.tf file
+
+terraform init
+resource "aws_vpc" "qa_vpc"{
+  
+  cidr_block = "10.0.0.0/24"
+}
+
+resource "aws_subnet" "qa_subnet-1"{
+   vpc_id = aws_vpc.qa_vpc.id
+   cidr_block = "10.0.0.0/25"
+}
+In cmd prompt go to the folder where we have main.tf file
+terraform apply
